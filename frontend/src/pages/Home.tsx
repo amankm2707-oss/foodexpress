@@ -1,9 +1,59 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import BentoGrid from '../components/BentoGrid';
+import Menu from '../components/Menu';
+import CartSidebar from '../components/CartSidebar';
+import LoginPortals from '../components/LoginPortals';
+import Dashboards from '../components/Dashboards';
+import Footer from '../components/Footer';
+import { MenuItem, CartItem } from '../types';
 
 const Home: React.FC = () => {
+  const [cart, setCart] = useState<CartItem[]>([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const handleAddToCart = (item: MenuItem) => {
+    setCart(prevCart => {
+      const existing = prevCart.find(i => i.id === item.id);
+      if (existing) {
+        return prevCart.map(i => i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i);
+      }
+      return [...prevCart, { ...item, quantity: 1 }];
+    });
+    // Add pulsing animation to badge
+    const badge = document.getElementById('cart-badge');
+    if (badge) {
+      badge.classList.add('pulsing');
+      setTimeout(() => badge.classList.remove('pulsing'), 600);
+    }
+  };
+
+  const handleUpdateQuantity = (id: number, delta: number) => {
+    setCart(prevCart => {
+      return prevCart.map(item => {
+        if (item.id === id) {
+          return { ...item, quantity: Math.max(0, item.quantity + delta) };
+        }
+        return item;
+      }).filter(item => item.quantity > 0);
+    });
+  };
+
+  const handleRemoveItem = (id: number) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== id));
+  };
+
+  const handleCheckout = () => {
+    setIsCartOpen(false);
+    setTimeout(() => {
+      alert("Checkout simulated. Success Modal would open here.");
+      setCart([]);
+    }, 1000);
+  };
+
+  const cartItemCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+
   useEffect(() => {
     // 1. Intersection Observer for .reveal elements
     const revealElements = document.querySelectorAll('.reveal');
@@ -133,12 +183,26 @@ const Home: React.FC = () => {
         <div className="aurora-blob blob-cyan"></div>
       </div>
       
-      <Navbar />
+      <Navbar cartItemCount={cartItemCount} onCartToggle={() => setIsCartOpen(true)} />
       
       <main>
         <Hero />
         <BentoGrid />
+        <Menu onAddToCart={handleAddToCart} />
+        <LoginPortals />
+        <Dashboards />
       </main>
+
+      <Footer />
+
+      <CartSidebar 
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cart={cart}
+        onUpdateQuantity={handleUpdateQuantity}
+        onRemoveItem={handleRemoveItem}
+        onCheckout={handleCheckout}
+      />
     </>
   );
 };

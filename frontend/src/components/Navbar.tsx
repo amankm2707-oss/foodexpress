@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  cartItemCount: number;
+  onCartToggle: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ cartItemCount, onCartToggle }) => {
   return (
     <header className="navbar" id="navbar">
       <div className="nav-container">
@@ -24,9 +29,9 @@ const Navbar: React.FC = () => {
             <span id="coords-text">BLR : Indiranagar</span>
           </div>
 
-          <button className="cart-btn magnetic-target" id="cart-toggle" aria-label="Open Shopping Bag">
+          <button className="cart-btn magnetic-target" id="cart-toggle" aria-label="Open Shopping Bag" onClick={onCartToggle}>
             <i className="fa-solid fa-bag-shopping"></i>
-            <span className="cart-badge" id="cart-badge">0</span>
+            <span className="cart-badge" id="cart-badge">{cartItemCount}</span>
           </button>
         </div>
         
