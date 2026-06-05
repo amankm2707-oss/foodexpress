@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress | The Art of Indian Gastronomy</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="FoodExpress delivers realistic Indian favorites like biryani, butter chicken, dosa, momos, pizza, burgers, desserts, and beverages across Bangalore, Mumbai, Delhi, and Chennai.">
+    <meta name="keywords" content="Indian food delivery, biryani, pizza, burgers, South Indian food, North Indian meals, FoodExpress, Bangalore, Mumbai, Delhi, glassmorphism UI">
+    <meta name="author" content="FoodExpress India">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Liquid Custom Cursor -->
+    <div class="cursor-dot" id="custom-cursor-dot"></div>
+    <div class="cursor-ring" id="custom-cursor-ring"></div>
+    <!-- App Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-text">Food<span class="gradient-text">Express</span></span>
+                <div class="logo-dot"></div>
+            </div>
+            <div class="loader-ring">
+                <div class="ring-core"></div>
+            </div>
+            <p class="loader-status">Locating Indian Gastronomy Coordinates...</p>
+        </div>
+    </div>
+    <!-- Stripe-style Decorative Grid Lines -->
+    <div class="stripe-gridlines">
+        <div class="grid-line line-v-1"></div>
+        <div class="grid-line line-v-2"></div>
+        <div class="grid-line line-v-3"></div>
+    </div>
+    <!-- Dynamic Aurora Glow Blobs -->
+    <div class="aurora-container">
+        <div class="aurora-blob blob-saffron"></div>
+        <div class="aurora-blob blob-magenta"></div>
+        <div class="aurora-blob blob-cyan"></div>
+    </div>
+    <!-- Sticky Glassmorphic Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand magnetic-target">
+                Food<span class="gradient-text">Express</span><span class="brand-dot"></span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link active magnetic-target">Home</a>
+                <a href="#restaurants" class="nav-link magnetic-target">Guilds</a>
+                <a href="#menu" class="nav-link magnetic-target">Menu</a>
+                <a href="#login" class="nav-link magnetic-target">Login</a>
+                <a href="#testimonials" class="nav-link magnetic-target">Reviews</a>
+                <a href="#download" class="nav-link magnetic-target">App</a>
+            </nav>
+            <div class="nav-actions">
+                <!-- Location Indicator Badge -->
+                <div class="coords-badge glass-panel" id="coords-display">
+                    <span class="pulse-dot"></span>
+                    <span id="coords-text">BLR : Indiranagar</span>
+                </div>
+                
+                <button class="cart-btn magnetic-target" id="cart-toggle" aria-label="Open Shopping Bag">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Mobile Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <div class="drawer-header">
+            <span class="logo-text">Food<span class="gradient-text">Express</span></span>
+            <button class="close-drawer" id="close-drawer-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="drawer-links">
+            <a href="#hero" class="drawer-link">Home</a>
+            <a href="#restaurants" class="drawer-link">Gourmet Guilds</a>
+            <a href="#menu" class="drawer-link">Food Menu</a>
+            <a href="#login" class="drawer-link">Access Portals</a>
+            <a href="#admin" class="drawer-link">Admin Core</a>
+            <a href="#database" class="drawer-link">Database Stack</a>
+            <a href="#testimonials" class="drawer-link">Chronicles</a>
+            <a href="#download" class="drawer-link">App Core</a>
+        </nav>
+        <div class="drawer-footer">
+            <p>Redefining Indian hospitality through light-speed delivery logistics.</p>
+        </div>
+    </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="section-container hero-grid">
+                <!-- Left Content -->
+                <div class="hero-content reveal">
+                    <div class="hero-badge">
+                        <span class="pulse-ring"></span>
+                        <span class="badge-text"><i class="fa-solid fa-fire-burner"></i> The Golden Age of Indian Dining</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Indian Gastronomy, <span class="gradient-text text-glow">Refined & Delivered</span>.
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Order biryani, butter chicken, paneer meals, dosa, momos, burgers, desserts, and drinks from popular Indian kitchens with fast city delivery.
+                    </p>
+                    
+                    <!-- Advanced Indian City Coordinates Selector -->
+                    <div class="hero-search-wrapper glass-panel">
+                        <div class="search-field">
+                            <i class="fa-solid fa-map-pin location-icon"></i>
+                            <select id="city-selector" class="city-dropdown magnetic-target">
+                                <option value="blr" data-coords="12.9716° N, 77.5946° E" data-name="Bangalore Hub (Indiranagar)" selected>Bangalore — Indiranagar</option>
+                                <option value="bom" data-coords="19.0760° N, 72.8777° E" data-name="Mumbai Hub (Bandra West)">Mumbai — Bandra West</option>
+                                <option value="del" data-coords="28.6139° N, 77.2090° E" data-name="Delhi Hub (Connaught Place)">Delhi — Connaught Place</option>
+                                <option value="maa" data-coords="13.0827° N, 80.2707° E" data-name="Chennai Hub (Adyar/ECR)">Chennai — Adyar / ECR</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary btn-magnetic" id="find-food-btn">
+                            <span>Lock Coordinates</span>
+                            <i class="fa-solid fa-bullseye"></i>
+                        </button>
+                    </div>
+                    <!-- Trust Indicators -->
+                    <div class="hero-trust">
+                        <div class="trust-avatars">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Epicure" class="trust-img">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="Epicure" class="trust-img">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80" alt="Epicure" class="trust-img">
+                        </div>
+                        <p class="trust-text">
+                            Preferred by <span class="highlight-text bold">22,500+</span> food lovers in India. <span class="stars"><i class="fa-solid fa-star"></i> 4.8/5</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Visual (3D Parallax Stack) -->
+                <div class="hero-visual reveal">
+                    <div class="card-stack">
+                        <!-- Card 1: Chicken Biryani -->
+                        <div class="interactive-3d-card card-primary glass-panel" data-tilt>
+                            <div class="card-glow"></div>
+                            <div class="card-image-container">
+                                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=500&q=80" alt="Chicken Biryani" class="food-img">
+                                <span class="item-tag tag-hot">Non-Veg Bestseller</span>
+                            </div>
+                            <div class="card-details">
+                                <h3>Chicken Biryani</h3>
+                                <div class="card-meta">
+                                    <span><i class="fa-solid fa-star star-glow"></i> 4.95</span>
+                                    <span>20 Min</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2: Butter Chicken -->
+                        <div class="interactive-3d-card card-secondary glass-panel" data-tilt>
+                            <div class="card-glow"></div>
+                            <div class="card-image-container">
+                                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=500&q=80" alt="Butter Chicken Tacos" class="food-img">
+                                <span class="item-tag tag-trending">North Indian</span>
+                            </div>
+                            <div class="card-details">
+                                <h3>Butter Chicken</h3>
+                                <div class="card-meta">
+                                    <span><i class="fa-solid fa-star star-glow"></i> 4.88</span>
+                                    <span>15 Min</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating Michelin Badge -->
+                        <div class="floating-badge-glass glass-panel animated-float-slow">
+                            <div class="badge-icon"><i class="fa-solid fa-mortar-pestle"></i></div>
+                            <div class="badge-info">
+                                <h4>Fresh Kitchen Prep</h4>
+                                <p>Hot meals packed well</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bento Grid Highlights (Tesla / Stripe layout) -->
+        <section class="section-padding grid-lines" id="stats">
+            <div class="section-container">
+                <div class="bento-grid">
+                    <!-- Box 1: Core Logistics Tracker -->
+                    <div class="bento-box glass-panel reveal large-col" data-tilt>
+                        <div class="bento-content flex-row">
+                            <div class="bento-text">
+                                <span class="bento-tag text-orange"><i class="fa-solid fa-location-crosshairs"></i> Logistics Core</span>
+                                <h2 class="bento-number text-glow" id="stat-delivery">14</h2>
+                                <span class="bento-unit">Minutes Indian Hub Avg</span>
+                                <p class="bento-description">Smart route planning helps meals reach nearby homes quickly while staying hot and fresh.</p>
+                            </div>
+                            <div class="bento-graphic">
+                                <div class="speed-radar">
+                                    <span class="radar-sweep"></span>
+                                    <span class="radar-dot dot-1"></span>
+                                    <span class="radar-dot dot-2"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Box 2: Tandoor Masters -->
+                    <div class="bento-box glass-panel reveal" data-tilt>
+                        <div class="bento-content">
+                            <span class="bento-tag text-purple"><i class="fa-solid fa-crown"></i> Legacy Masters</span>
+                            <h3 class="bento-title">Tandoor Masters</h3>
+                            <p class="bento-description">Partnering with trusted kitchens serving everyday Indian favorites across major cities.</p>
+                            <div class="chef-icon-container">
+                                <i class="fa-solid fa-pepper-hot floating-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Box 3: Trust Score -->
+                    <div class="bento-box glass-panel reveal" data-tilt>
+                        <div class="bento-content">
+                            <span class="bento-tag text-cyan"><i class="fa-solid fa-star"></i> Heritage Index</span>
+                            <h2 class="bento-number text-glow" id="stat-rating">4.95</h2>
+                            <span class="bento-unit">Epicurean Rating</span>
+                            <div class="stars-row">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="bento-description">Praised by critical Indian food columnists and culinary connoisseurs.</p>
+                        </div>
+                    </div>
+                    <!-- Box 4: Eco packaging -->
+                    <div class="bento-box glass-panel reveal large-col" data-tilt>
+                        <div class="bento-content flex-row">
+                            <div class="bento-text">
+                                <span class="bento-tag text-green"><i class="fa-solid fa-earth-asia"></i> Bio Packaging</span>
+                                <h3 class="bento-title">Eco Packaging</h3>
+                                <p class="bento-description">Orders use practical, food-safe packaging designed for freshness, portability, and lower waste.</p>
+                            </div>
+                            <div class="eco-visual">
+                                <div class="leaf-orb">
+                                    <i class="fa-solid fa-seedling leaf-pulsing"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Role Based Login Portals -->
+        <section class="section-padding grid-lines" id="login">
+            <div class="section-container">
+                <div class="section-header text-center reveal">
+                    <span class="accent-label">SECURE ACCESS PORTALS</span>
+                    <h2 class="section-title">FoodExpress <span class="gradient-text">Login Matrix</span></h2>
+                    <p class="section-subtitle">Dedicated frontend access surfaces for customers, restaurant partners, and delivery partners.</p>
+                </div>
+                <div class="login-portals-grid">
+                    <div class="login-card glass-panel reveal" data-tilt>
+                        <div class="login-card-top">
+                            <span class="login-icon"><i class="fa-solid fa-user"></i></span>
+                            <div>
+                                <span class="bento-tag text-orange">Customer Login</span>
+                                <h3>Epicure Access</h3>
+                            </div>
+                        </div>
+                        <form class="portal-login-form" data-login-type="Customer">
+                            <div class="portal-field">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" placeholder="customer@foodexpress.in" required>
+                            </div>
+                            <div class="portal-field">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" placeholder="Password" required>
+                            </div>
+                            <button class="btn btn-primary btn-block btn-magnetic" type="submit">
+                                <span>Enter Customer Portal</span>
+                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="login-card glass-panel reveal" data-tilt>
+                        <div class="login-card-top">
+                            <span class="login-icon"><i class="fa-solid fa-store"></i></span>
+                            <div>
+                                <span class="bento-tag text-purple">Restaurant Partner Login</span>
+                                <h3>Guild Console</h3>
+                            </div>
+                        </div>
+                        <form class="portal-login-form" data-login-type="Restaurant Partner">
+                            <div class="portal-field">
+                                <i class="fa-solid fa-id-badge"></i>
+                                <input type="text" placeholder="Partner ID" required>
+                            </div>
+                            <div class="portal-field">
+                                <i class="fa-solid fa-key"></i>
+                                <input type="password" placeholder="Access Key" required>
+                            </div>
+                            <button class="btn btn-primary btn-block btn-magnetic" type="submit">
+                                <span>Open Guild Console</span>
+                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="login-card glass-panel reveal" data-tilt>
+                        <div class="login-card-top">
+                            <span class="login-icon"><i class="fa-solid fa-motorcycle"></i></span>
+                            <div>
+                                <span class="bento-tag text-cyan">Delivery Partner Login</span>
+                                <h3>Rider Grid</h3>
+                            </div>
+                        </div>
+                        <form class="portal-login-form" data-login-type="Delivery Partner">
+                            <div class="portal-field">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" placeholder="+91 Rider Mobile" required>
+                            </div>
+                            <div class="portal-field">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <input type="password" placeholder="Route PIN" required>
+                            </div>
+                            <button class="btn btn-primary btn-block btn-magnetic" type="submit">
+                                <span>Join Delivery Grid</span>
+                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="auth-session-bar glass-panel reveal">
+                    <div>
+                        <span class="bento-tag text-cyan"><i class="fa-solid fa-shield-heart"></i> Session Memory</span>
+                        <h3 id="session-role-title">Guest access active</h3>
+                        <p id="session-role-copy">Login or create an account to unlock role based dashboards, saved addresses, order history, and simulated DBMS records.</p>
+                    </div>
+                    <div class="auth-session-actions">
+                        <button class="category-pill magnetic-target auth-open-btn" data-auth-role="Customer" data-auth-mode="signup"><i class="fa-solid fa-user-plus"></i><span>Customer Signup</span></button>
+                        <button class="category-pill magnetic-target auth-open-btn" data-auth-role="Restaurant Partner" data-auth-mode="signup"><i class="fa-solid fa-store"></i><span>Partner Signup</span></button>
+                        <button class="category-pill magnetic-target auth-open-btn" data-auth-role="Delivery Partner" data-auth-mode="signup"><i class="fa-solid fa-motorcycle"></i><span>Rider Signup</span></button>
+                        <button class="category-pill magnetic-target auth-open-btn" data-auth-role="Admin" data-auth-mode="login"><i class="fa-solid fa-user-shield"></i><span>Admin Login</span></button>
+                        <button class="category-pill magnetic-target" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Customer Management Console -->
+        <section class="section-padding grid-lines" id="customer-console">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="accent-label">CUSTOMER DBMS CONSOLE</span>
+                    <h2 class="section-title">Live <span class="gradient-text">Order Experience</span></h2>
+                    <p class="section-subtitle">Customer-side simulation for addresses, checkout, coupons, recommendations, favorites, reviews, and tracking.</p>
+                </div>
+                <div class="console-grid">
+                    <div class="console-panel glass-panel reveal">
+                        <div class="admin-panel-header">
+                            <h3>Food Search</h3>
+                            <span class="rating-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Picks</span>
+                        </div>
+                        <div class="portal-field">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input id="food-search-input" type="text" placeholder="Search biryani, dosa, lassi...">
+                        </div>
+                        <div class="search-suggestions" id="search-suggestions"></div>
+                        <div class="mini-card-list" id="recommended-list"></div>
+                    </div>
+                    <div class="console-panel glass-panel reveal">
+                        <div class="admin-panel-header">
+                            <h3>Saved Addresses</h3>
+                            <button class="category-pill magnetic-target" id="add-address-btn"><i class="fa-solid fa-plus"></i><span>Add</span></button>
+                        </div>
+                        <div class="mini-card-list" id="address-list"></div>
+                    </div>
+                    <div class="console-panel glass-panel reveal">
+                        <div class="admin-panel-header">
+                            <h3>Wishlist</h3>
+                            <span class="rest-tag" id="wishlist-count">0 saved</span>
+                        </div>
+                        <div class="mini-card-list" id="wishlist-list"></div>
+                    </div>
+                    <div class="console-panel glass-panel reveal">
+                        <div class="admin-panel-header">
+                            <h3>Order Tracking</h3>
+                            <span class="rating-badge" id="eta-timer"><i class="fa-solid fa-clock"></i> 18:00</span>
+                        </div>
+                        <div class="tracking-steps" id="tracking-steps">
+                            <span class="active">Placed</span>
+                            <span>Preparing</span>
+                            <span>Picked Up</span>
+                            <span>Delivered</span>
+                        </div>
+                        <div class="progress-rail"><span id="tracking-progress"></span></div>
+                        <p class="panel-copy" id="tracking-copy">Place an order to start animated live delivery tracking.</p>
+                    </div>
+                </div>
+                <div class="admin-panels-grid customer-history-grid">
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header">
+                            <h3>Order History</h3>
+                            <button class="category-pill magnetic-target" id="open-invoice-btn"><i class="fa-solid fa-file-invoice"></i><span>Latest Receipt</span></button>
+                        </div>
+                        <div class="admin-table" id="order-history-list"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header">
+                            <h3>Ratings & Reviews</h3>
+                            <span class="rest-tag">Feedback DB</span>
+                        </div>
+                        <div class="rating-input-row" id="rating-stars">
+                            <button data-rating="1"><i class="fa-solid fa-star"></i></button>
+                            <button data-rating="2"><i class="fa-solid fa-star"></i></button>
+                            <button data-rating="3"><i class="fa-solid fa-star"></i></button>
+                            <button data-rating="4"><i class="fa-solid fa-star"></i></button>
+                            <button data-rating="5"><i class="fa-solid fa-star"></i></button>
+                        </div>
+                        <div class="portal-field">
+                            <i class="fa-solid fa-message"></i>
+                            <input id="review-input" type="text" placeholder="Write a short review">
+                        </div>
+                        <button class="btn btn-primary btn-block btn-magnetic" id="submit-review-btn"><span>Submit Review</span><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Admin Dashboard Preview -->
+        <section class="section-padding" id="admin">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="accent-label">ADMIN DASHBOARD</span>
+                    <h2 class="section-title">Command <span class="gradient-text">Operations Core</span></h2>
+                    <p class="section-subtitle">Frontend dashboard view for monitoring orders, partners, riders, inventory, and revenue signals.</p>
+                </div>
+                <div class="admin-dashboard-grid">
+                    <div class="admin-stat-card glass-panel reveal" data-tilt>
+                        <span class="bento-tag text-orange"><i class="fa-solid fa-users"></i> Total Users</span>
+                        <h3 id="admin-users-count">248</h3>
+                        <p>32 active deliveries currently moving through city routes.</p>
+                    </div>
+                    <div class="admin-stat-card glass-panel reveal" data-tilt>
+                        <span class="bento-tag text-green"><i class="fa-solid fa-store"></i> Total Restaurants</span>
+                        <h3 id="admin-restaurants-count">76</h3>
+                        <p>Restaurant partners accepting customer orders.</p>
+                    </div>
+                    <div class="admin-stat-card glass-panel reveal" data-tilt>
+                        <span class="bento-tag text-cyan"><i class="fa-solid fa-route"></i> Delivery Partners</span>
+                        <h3 id="admin-riders-count">191</h3>
+                        <p>Delivery partners assigned across Bangalore, Mumbai, Delhi, and Chennai.</p>
+                    </div>
+                    <div class="admin-stat-card glass-panel reveal" data-tilt>
+                        <span class="bento-tag text-purple"><i class="fa-solid fa-indian-rupee-sign"></i> Total Revenue</span>
+                        <h3>₹4.8L</h3>
+                        <p>Gross order value from menu items and delivery fees.</p>
+                    </div>
+                </div>
+                <div class="admin-panels-grid">
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header">
+                            <h3>Recent Order Stream</h3>
+                            <span class="rating-badge"><i class="fa-solid fa-bolt"></i> Live</span>
+                        </div>
+                        <div class="admin-table">
+                            <div class="admin-row">
+                                <span>#FX-1184</span>
+                                <span>Awadhi Gold Dum</span>
+                                <strong>Preparing</strong>
+                            </div>
+                            <div class="admin-row">
+                                <span>#FX-1185</span>
+                                <span>Naan Taco Flight</span>
+                                <strong>Dispatched</strong>
+                            </div>
+                            <div class="admin-row">
+                                <span>#FX-1186</span>
+                                <span>Mango Lassi</span>
+                                <strong>Delivered</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header">
+                            <h3>Control Actions</h3>
+                            <span class="rest-tag">Frontend</span>
+                        </div>
+                        <div class="admin-actions">
+                            <button class="category-pill magnetic-target admin-action-btn" data-admin-action="Menu sync initialized">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                                <span>Sync Menus</span>
+                            </button>
+                            <button class="category-pill magnetic-target admin-action-btn" data-admin-action="Partner audit queued">
+                                <i class="fa-solid fa-clipboard-check"></i>
+                                <span>Audit Guilds</span>
+                            </button>
+                            <button class="category-pill magnetic-target admin-action-btn" data-admin-action="Delivery map refreshed">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                <span>Refresh Routes</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="advanced-dashboard-grid">
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Payment Records</h3><span class="rest-tag">Transactions</span></div>
+                        <div class="admin-table" id="payment-records-table"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Manage Users</h3><span class="rest-tag">Ban/Unban</span></div>
+                        <div class="admin-table" id="manage-users-table"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Fraud Alerts</h3><span class="rating-badge"><i class="fa-solid fa-triangle-exclamation"></i> Watch</span></div>
+                        <div class="mini-card-list" id="fraud-alert-list"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Complaints</h3><span class="rest-tag">Support</span></div>
+                        <div class="mini-card-list" id="complaint-list"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal chart-wide">
+                        <div class="admin-panel-header"><h3>Revenue Graph</h3><span class="rest-tag">Monthly Growth</span></div>
+                        <div class="chart-bars" id="revenue-chart"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Activity Logs</h3><span class="rating-badge"><i class="fa-solid fa-bell"></i> Live</span></div>
+                        <div class="mini-card-list" id="activity-log-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Restaurant Partner Dashboard -->
+        <section class="section-padding grid-lines" id="restaurant-dashboard">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="accent-label">RESTAURANT PARTNER DASHBOARD</span>
+                    <h2 class="section-title">Guild <span class="gradient-text">Management Console</span></h2>
+                    <p class="section-subtitle">Working frontend simulation for menu CRUD, inventory, orders, revenue, analytics, and notifications.</p>
+                </div>
+                <div class="advanced-dashboard-grid">
+                    <div class="admin-panel glass-panel reveal chart-wide">
+                        <div class="admin-panel-header"><h3>Food Item Manager</h3><span class="rest-tag">CRUD</span></div>
+                        <form class="dashboard-form" id="food-item-form">
+                            <div class="portal-field"><i class="fa-solid fa-bowl-food"></i><input id="food-name-field" placeholder="Dish name" required></div>
+                            <div class="portal-field"><i class="fa-solid fa-indian-rupee-sign"></i><input id="food-price-field" type="number" placeholder="Price" required></div>
+                            <div class="portal-field"><i class="fa-solid fa-layer-group"></i><input id="food-category-field" placeholder="Category" required></div>
+                            <div class="portal-field"><i class="fa-solid fa-image"></i><input id="food-image-field" type="file" accept="image/*"></div>
+                            <button class="btn btn-primary btn-block btn-magnetic" type="submit"><span>Add / Update Food Item</span><i class="fa-solid fa-floppy-disk"></i></button>
+                        </form>
+                        <div class="image-preview glass-panel" id="food-image-preview">Image preview</div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Menu Inventory</h3><span class="rating-badge">Stock</span></div>
+                        <div class="admin-table" id="restaurant-menu-table"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Incoming Orders</h3><span class="rating-badge"><i class="fa-solid fa-bolt"></i> Queue</span></div>
+                        <div class="admin-table" id="incoming-orders-table"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Revenue Stats</h3><span class="rest-tag">Today</span></div>
+                        <div class="mini-card-list" id="restaurant-stats-list"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Top Selling Items</h3><span class="rest-tag">Analytics</span></div>
+                        <div class="chart-bars" id="sales-chart"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Restaurant Profile</h3><span class="rest-tag">Profile</span></div>
+                        <div class="mini-card-list" id="restaurant-profile-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Delivery Partner Dashboard -->
+        <section class="section-padding" id="delivery-dashboard">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="accent-label">DELIVERY PARTNER DASHBOARD</span>
+                    <h2 class="section-title">Rider <span class="gradient-text">Route Grid</span></h2>
+                    <p class="section-subtitle">Accept deliveries, update delivery state, track earnings, toggle availability, and view performance.</p>
+                </div>
+                <div class="admin-dashboard-grid">
+                    <div class="admin-stat-card glass-panel reveal"><span class="bento-tag text-orange">Active Orders</span><h3 id="active-delivery-count">3</h3><p>Assigned deliveries waiting for action.</p></div>
+                    <div class="admin-stat-card glass-panel reveal"><span class="bento-tag text-green">Earnings</span><h3 id="rider-earnings">Rs 2,840</h3><p>Simulated weekly delivery payout.</p></div>
+                    <div class="admin-stat-card glass-panel reveal"><span class="bento-tag text-cyan">Rating</span><h3>4.91</h3><p>Performance score from customer feedback.</p></div>
+                    <div class="admin-stat-card glass-panel reveal"><span class="bento-tag text-purple">Availability</span><h3 id="availability-label">Online</h3><p><button class="category-pill magnetic-target" id="availability-toggle"><i class="fa-solid fa-power-off"></i><span>Toggle Status</span></button></p></div>
+                </div>
+                <div class="admin-panels-grid">
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Assigned Deliveries</h3><span class="rating-badge">Route Queue</span></div>
+                        <div class="admin-table" id="assigned-deliveries-table"></div>
+                    </div>
+                    <div class="admin-panel glass-panel reveal">
+                        <div class="admin-panel-header"><h3>Delivery History</h3><span class="rest-tag">Completed</span></div>
+                        <div class="mini-card-list" id="delivery-history-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Database Features Section -->
+        <section class="section-padding grid-lines" id="database">
+            <div class="section-container">
+                <div class="section-header text-center reveal">
+                    <span class="accent-label">DATABASE FEATURES</span>
+                    <h2 class="section-title">Structured <span class="gradient-text">Data Foundation</span></h2>
+                    <p class="section-subtitle">Frontend feature map for the FoodExpress database layer used in a complete implementation.</p>
+                </div>
+                <div class="database-features-grid">
+                    <div class="database-feature-card glass-panel reveal" data-tilt>
+                        <i class="fa-solid fa-users text-orange"></i>
+                        <h3>User Roles</h3>
+                        <p>Customers, restaurant partners, delivery partners, and admins mapped with secure role based access.</p>
+                    </div>
+                    <div class="database-feature-card glass-panel reveal" data-tilt>
+                        <i class="fa-solid fa-bowl-food text-cyan"></i>
+                        <h3>Menu Catalog</h3>
+                        <p>Restaurant menus, dish categories, item availability, pricing, ratings, and media assets.</p>
+                    </div>
+                    <div class="database-feature-card glass-panel reveal" data-tilt>
+                        <i class="fa-solid fa-cart-shopping text-green"></i>
+                        <h3>Order Records</h3>
+                        <p>Cart items, taxes, delivery fees, payment status, and live kitchen preparation states.</p>
+                    </div>
+                    <div class="database-feature-card glass-panel reveal" data-tilt>
+                        <i class="fa-solid fa-location-dot text-purple"></i>
+                        <h3>Delivery Tracking</h3>
+                        <p>Route assignment, rider status, city hubs, delivery timestamps, and customer coordinates.</p>
+                    </div>
+                    <div class="database-feature-card glass-panel reveal" data-tilt>
+                        <i class="fa-solid fa-chart-line text-orange"></i>
+                        <h3>Analytics</h3>
+                        <p>Revenue summaries, top dishes, partner performance, customer loyalty, and demand patterns.</p>
+                    </div>
+                    <div class="database-feature-card glass-panel reveal" data-tilt>
+                        <i class="fa-solid fa-shield text-cyan"></i>
+                        <h3>Security Logs</h3>
+                        <p>Login attempts, admin actions, data updates, failed access events, and audit history.</p>
+                    </div>
+                    <div class="database-feature-card glass-panel reveal" data-tilt>
+                        <i class="fa-solid fa-credit-card text-orange"></i>
+                        <h3>Payment Records</h3>
+                        <p>UPI, card, cash on delivery, invoice totals, transaction references, and refund states.</p>
+                    </div>
+                    <div class="database-feature-card glass-panel reveal" data-tilt>
+                        <i class="fa-solid fa-boxes-stacked text-green"></i>
+                        <h3>Inventory Management</h3>
+                        <p>Stock levels, dish availability, low-stock alerts, and partner-side item updates.</p>
+                    </div>
+                    <div class="database-feature-card glass-panel reveal" data-tilt>
+                        <i class="fa-solid fa-comments text-purple"></i>
+                        <h3>Feedback Management</h3>
+                        <p>Ratings, reviews, complaints, fraud alerts, support tickets, and notification logs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Categories Filters -->
+        <section class="section-padding" id="categories">
+            <div class="section-container">
+                <div class="section-header text-center reveal">
+                    <h2 class="section-title">Curated <span class="gradient-text">Indian Crafts</span></h2>
+                    <p class="section-subtitle">Filter by dish type, veg preference, price, or rating.</p>
+                </div>
+                
+                <!-- Saffron Glow Category Pill Grid -->
+                <div class="categories-filter-wrapper reveal">
+                    <div class="categories-container scrollbar-hidden">
+                        <button class="category-pill active magnetic-target" data-filter="all">
+                            <i class="fa-solid fa-plate-wheat"></i>
+                            <span>All Items</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="biryani">
+                            <i class="fa-solid fa-mortar-pestle"></i>
+                            <span>Biryani</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="pizza">
+                            <i class="fa-solid fa-pizza-slice"></i>
+                            <span>Pizza</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="burgers">
+                            <i class="fa-solid fa-burger"></i>
+                            <span>Burgers</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="chinese">
+                            <i class="fa-solid fa-bowl-food"></i>
+                            <span>Chinese</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="north-indian">
+                            <i class="fa-solid fa-stroopwafel"></i>
+                            <span>North Indian</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="south-indian">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>South Indian</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="desserts">
+                            <i class="fa-solid fa-ice-cream"></i>
+                            <span>Desserts</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="beverages">
+                            <i class="fa-solid fa-mug-saucer"></i>
+                            <span>Beverages</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="street-food">
+                            <i class="fa-solid fa-store"></i>
+                            <span>Street Food</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="healthy-meals">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span>Healthy Meals</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="veg">
+                            <i class="fa-solid fa-seedling"></i>
+                            <span>Veg</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="non-veg">
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                            <span>Non-Veg</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="price-low">
+                            <i class="fa-solid fa-arrow-down-wide-short"></i>
+                            <span>Price Low to High</span>
+                        </button>
+                        <button class="category-pill magnetic-target" data-filter="top-rated">
+                            <i class="fa-solid fa-star"></i>
+                            <span>Top Rated</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Elite Indian Restaurants Guilds -->
+        <section class="section-padding" id="restaurants">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="accent-label">ELITE PARTNER GUILDS</span>
+                    <h2 class="section-title">Grand <span class="gradient-text">Indian Culinaria</span></h2>
+                    <p class="section-subtitle">Distinguished culinary temples preserving age-old spice calculations.</p>
+                </div>
+                <div class="restaurants-grid">
+                    <!-- Restaurant 1 -->
+                    <div class="restaurant-card glass-panel reveal" data-tilt>
+                        <div class="rest-image-box">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="The Biryani Project" class="rest-img">
+                            <div class="rest-overlay">
+                                <span class="rest-tag">Lucknowi Craft</span>
+                            </div>
+                        </div>
+                        <div class="rest-content">
+                            <div class="rest-header">
+                                <h3>The Royal Awadh Project</h3>
+                                <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.96</span>
+                            </div>
+                            <p class="rest-cuisines">Slow-cooked Biryanis, Kakori Kebabs, Dum curries</p>
+                            <div class="rest-info-row">
+                                <span><i class="fa-solid fa-clock"></i> 20-30 min</span>
+                                <span><i class="fa-solid fa-wallet"></i> $$$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Restaurant 2 -->
+                    <div class="restaurant-card glass-panel reveal" data-tilt>
+                        <div class="rest-image-box">
+                            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="Bandra Spice Lab" class="rest-img">
+                            <div class="rest-overlay">
+                                <span class="rest-tag">Modern Fusion</span>
+                            </div>
+                        </div>
+                        <div class="rest-content">
+                            <div class="rest-header">
+                                <h3>Bandra Spice Lab</h3>
+                                <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.92</span>
+                            </div>
+                            <p class="rest-cuisines">Naan Tacos, Deconstructed Starters, Craft Elixirs</p>
+                            <div class="rest-info-row">
+                                <span><i class="fa-solid fa-clock"></i> 15-25 min</span>
+                                <span><i class="fa-solid fa-wallet"></i> $$$$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Restaurant 3 -->
+                    <div class="restaurant-card glass-panel reveal" data-tilt>
+                        <div class="rest-image-box">
+                            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=80" alt="Connaught Curry House" class="rest-img">
+                            <div class="rest-overlay">
+                                <span class="rest-tag">Legacy Tandoor</span>
+                            </div>
+                        </div>
+                        <div class="rest-content">
+                            <div class="rest-header">
+                                <h3>Connaught Curry House</h3>
+                                <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.88</span>
+                            </div>
+                            <p class="rest-cuisines">Paneer Tikka, Dal Makhani, Garlic Naans</p>
+                            <div class="rest-info-row">
+                                <span><i class="fa-solid fa-clock"></i> 18-28 min</span>
+                                <span><i class="fa-solid fa-wallet"></i> $$</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Indian Food Menu -->
+        <section class="section-padding" id="menu">
+            <div class="section-container">
+                <div class="section-header text-center reveal">
+                    <span class="accent-label">INDIAN FOOD MENU</span>
+                    <h2 class="section-title">Popular Indian <span class="gradient-text">Dishes</span></h2>
+                    <p class="section-subtitle">Realistic Indian food delivery choices across veg, non-veg, snacks, meals, desserts, and drinks.</p>
+                </div>
+                <div class="menu-grid" id="menu-items-grid">
+                    <!-- Rendered via script.js -->
+                </div>
+            </div>
+        </section>
+        <!-- Customer Testimonials -->
+        <section class="section-padding" id="testimonials">
+            <div class="section-container">
+                <div class="section-header text-center reveal">
+                    <span class="accent-label">TESTIMONIALS</span>
+                    <h2 class="section-title">The Culinary <span class="gradient-text">Chronicles</span></h2>
+                    <p class="section-subtitle">Read feedback from customers ordering Indian meals across the city.</p>
+                </div>
+                <div class="testimonials-slider-container reveal">
+                    <div class="testimonials-grid-system">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card glass-panel" data-tilt>
+                            <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
+                            <p class="testimonial-text">
+                                "The chicken biryani arrived hot, well packed, and full of flavor. The rice, masala, and portion size were just right."
+                            </p>
+                            <div class="testimonial-user">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Aditi Rao" class="user-avatar">
+                                <div class="user-info">
+                                    <h4>Aditi Rao</h4>
+                                    <span>Culinary Columnist, Bangalore</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card glass-panel" data-tilt>
+                            <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
+                            <p class="testimonial-text">
+                                "The speed is mind-boggling. Bandra Spice Lab's Butter Chicken Naan Tacos reached my Bandra West apartment in under 15 minutes. The presentation was gorgeous!"
+                            </p>
+                            <div class="testimonial-user">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Vikram Malhotra" class="user-avatar">
+                                <div class="user-info">
+                                    <h4>Vikram Malhotra</h4>
+                                    <span>Food Investor, Mumbai</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- App Utility Section -->
+        <section class="section-padding" id="download">
+            <div class="section-container">
+                <div class="download-banner-glass glass-panel reveal">
+                    <div class="banner-grid">
+                        <div class="banner-text">
+                            <span class="badge-text"><i class="fa-solid fa-mobile-screen-button"></i> GOV APPROVED SECURITY</span>
+                            <h2>Indian gastronomy, at your <span class="gradient-text">fingertips</span>.</h2>
+                            <p>Download the official FoodExpress app to browse menus, track orders, save addresses, and receive food offers.</p>
+                            
+                            <div class="download-buttons">
+                                <a href="#" class="store-btn glass-panel magnetic-target">
+                                    <i class="fa-brands fa-apple"></i>
+                                    <div class="store-text">
+                                        <span>Download on the</span>
+                                        <strong>App Store</strong>
+                                    </div>
+                                </a>
+                                <a href="#" class="store-btn glass-panel magnetic-target">
+                                    <i class="fa-brands fa-google-play"></i>
+                                    <div class="store-text">
+                                        <span>Get it on</span>
+                                        <strong>Google Play</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="banner-mockup">
+                            <div class="phone-frame glass-panel animated-float">
+                                <div class="phone-screen">
+                                    <div class="phone-header">
+                                        <span class="phone-time">12:30</span>
+                                        <span class="phone-notch"></span>
+                                        <div class="phone-icons">
+                                            <i class="fa-solid fa-wifi"></i>
+                                            <i class="fa-solid fa-battery-three-quarters"></i>
+                                        </div>
+                                    </div>
+                                    <div class="phone-body">
+                                        <div class="phone-app-logo">Food<span class="gradient-text">Express</span></div>
+                                        <div class="phone-card glass-panel">
+                                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=150&q=80" alt="Biryani Icon">
+                                            <div>
+                                                <h5>Awadhi Gold Dum</h5>
+                                                <p class="text-orange">⚡ Dispatched (6m)</p>
+                                            </div>
+                                        </div>
+                                        <div class="phone-route-map">
+                                            <div class="phone-pulse-dot"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Floating Shopping Bag Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your <span class="gradient-text">Gastronomic Bag</span></h3>
+            <button class="cart-close-btn magnetic-target" id="cart-close" aria-label="Close Bag">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        
+        <div class="cart-empty-state" id="cart-empty">
+            <i class="fa-solid fa-utensils empty-icon"></i>
+            <p>Your culinary selection is empty.</p>
+            <button class="btn btn-primary btn-sm btn-magnetic" id="btn-browse-menu">
+                <span>Explore Menu</span>
+            </button>
+        </div>
+        
+        <div class="cart-items-wrapper scrollbar-hidden" id="cart-items-container">
+            <!-- Rendered via script.js -->
+        </div>
+        <div class="cart-footer" id="cart-footer-details">
+            <div class="portal-field cart-coupon-field">
+                <i class="fa-solid fa-ticket"></i>
+                <input id="coupon-input" type="text" placeholder="Coupon code: GOLD50, FEAST10">
+                <button id="apply-coupon-btn" aria-label="Apply coupon"><i class="fa-solid fa-check"></i></button>
+            </div>
+            <div class="portal-field cart-coupon-field">
+                <i class="fa-solid fa-gift"></i>
+                <input id="referral-input" type="text" placeholder="Referral code: FRIEND100">
+                <button id="apply-referral-btn" aria-label="Apply referral"><i class="fa-solid fa-check"></i></button>
+            </div>
+            <div class="footer-cost-row">
+                <span>Subtotal</span>
+                <span id="cost-subtotal">&#8377;0.00</span>
+            </div>
+            <div class="footer-cost-row">
+                <span>Delivery Fee</span>
+                <span id="cost-delivery">&#8377;0.00</span>
+            </div>
+            <div class="footer-cost-row">
+                <span>GST (5%)</span>
+                <span id="cost-gst">&#8377;0.00</span>
+            </div>
+            <hr class="glass-divider">
+            <div class="footer-cost-row cost-total-row">
+                <span>Total</span>
+                <span id="cost-total" class="gradient-text text-glow">&#8377;0.00</span>
+            </div>
+            
+            <button class="btn btn-primary btn-block btn-magnetic checkout-btn" id="btn-checkout">
+                <span>Execute Culinary Order</span>
+                <i class="fa-solid fa-fire"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Success Modal Dialog -->
+    <div class="success-modal-overlay" id="success-modal">
+        <div class="success-modal-card glass-panel">
+            <div class="success-checkmark-holder">
+                <div class="checkmark-circle">
+                    <i class="fa-solid fa-check-double"></i>
+                </div>
+            </div>
+            <h2>Tandoor Order Initialized!</h2>
+            <p>Your order has been confirmed. The restaurant is preparing your food and a delivery partner will be assigned shortly.</p>
+            <div class="modal-track-card glass-panel" id="modal-lock-badge">
+                <span class="pulse-ring"></span>
+                <span id="modal-lock-text">BLR coordinates locked: 12.9716° N</span>
+            </div>
+            <button class="btn btn-primary btn-magnetic" id="btn-close-modal"><span>Dismiss</span></button>
+        </div>
+    </div>
+    <!-- Functional DBMS Simulation Modals -->
+    <div class="success-modal-overlay app-modal-overlay" id="auth-modal">
+        <div class="success-modal-card glass-panel app-modal-card">
+            <button class="modal-x" data-close-modal="auth-modal"><i class="fa-solid fa-xmark"></i></button>
+            <h2 id="auth-modal-title">Secure Access</h2>
+            <p id="auth-modal-copy">Validate role credentials in frontend DBMS simulation mode.</p>
+            <form class="dashboard-form" id="auth-modal-form">
+                <div class="portal-field"><i class="fa-solid fa-user"></i><input id="auth-name" placeholder="Full name"></div>
+                <div class="portal-field"><i class="fa-solid fa-envelope"></i><input id="auth-email" type="email" placeholder="Email address" required></div>
+                <div class="portal-field"><i class="fa-solid fa-lock"></i><input id="auth-password" type="password" placeholder="Password" required></div>
+                <div class="portal-field"><i class="fa-solid fa-key"></i><input id="auth-otp" placeholder="OTP appears after verify" maxlength="6"></div>
+                <button class="btn btn-primary btn-block btn-magnetic" type="button" id="send-otp-btn"><span>Send OTP</span><i class="fa-solid fa-paper-plane"></i></button>
+                <button class="btn btn-primary btn-block btn-magnetic" type="submit"><span>Continue</span><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                <button class="category-pill magnetic-target" type="button" id="forgot-password-btn"><i class="fa-solid fa-circle-question"></i><span>Forgot Password</span></button>
+            </form>
+        </div>
+    </div>
+    <div class="success-modal-overlay app-modal-overlay" id="checkout-modal">
+        <div class="success-modal-card glass-panel app-modal-card">
+            <button class="modal-x" data-close-modal="checkout-modal"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Checkout Flow</h2>
+            <p>Select saved address and payment mode to create order, payment, invoice, and delivery records.</p>
+            <div class="mini-card-list" id="checkout-addresses"></div>
+            <div class="payment-options">
+                <button class="category-pill active" data-payment="UPI"><i class="fa-solid fa-mobile-screen"></i><span>UPI</span></button>
+                <button class="category-pill" data-payment="Card"><i class="fa-solid fa-credit-card"></i><span>Card</span></button>
+                <button class="category-pill" data-payment="Cash on Delivery"><i class="fa-solid fa-money-bill-wave"></i><span>Cash</span></button>
+            </div>
+            <button class="btn btn-primary btn-block btn-magnetic" id="confirm-order-btn"><span>Confirm Order</span><i class="fa-solid fa-check-double"></i></button>
+        </div>
+    </div>
+    <div class="success-modal-overlay app-modal-overlay" id="invoice-modal">
+        <div class="success-modal-card glass-panel app-modal-card">
+            <button class="modal-x" data-close-modal="invoice-modal"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Invoice Receipt</h2>
+            <div class="invoice-box" id="invoice-box"></div>
+            <button class="btn btn-primary btn-block btn-magnetic" data-close-modal="invoice-modal"><span>Done</span><i class="fa-solid fa-check"></i></button>
+        </div>
+    </div>
+    <button class="floating-chatbot glass-panel magnetic-target" id="chatbot-toggle" aria-label="Open chatbot"><i class="fa-solid fa-headset"></i><span id="chatbot-badge">1</span></button>
+    <div class="chatbot-panel glass-panel" id="chatbot-panel">
+        <div class="admin-panel-header"><h3>FoodExpress AI</h3><button class="cart-close-btn" id="chatbot-close"><i class="fa-solid fa-xmark"></i></button></div>
+        <div class="mini-card-list" id="chatbot-messages"></div>
+        <div class="portal-field"><i class="fa-solid fa-wand-magic-sparkles"></i><input id="chatbot-input" placeholder="Ask for offers, tracking, recommendations"><button id="chatbot-send"><i class="fa-solid fa-paper-plane"></i></button></div>
+    </div>
+    <div class="utility-dock glass-panel">
+        <button id="theme-toggle" class="dock-btn" title="Toggle theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
+        <button id="notification-toggle" class="dock-btn" title="Notifications"><i class="fa-solid fa-bell"></i><span id="notification-count">3</span></button>
+        <button id="profile-settings-btn" class="dock-btn" title="Profile"><i class="fa-solid fa-user-gear"></i></button>
+        <select id="language-selector" class="dock-select" title="Language"><option>EN</option><option>HI</option><option>TA</option><option>MR</option></select>
+    </div>
+    <div class="notification-center glass-panel" id="notification-center">
+        <div class="admin-panel-header"><h3>Notification Center</h3><button class="cart-close-btn" id="notification-close"><i class="fa-solid fa-xmark"></i></button></div>
+        <div class="mini-card-list" id="notification-list"></div>
+    </div>
+    <!-- Modern Dark Saffron Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-top">
+                <div class="footer-brand-box">
+                    <span class="logo-text">Food<span class="gradient-text">Express</span></span>
+                    <p class="brand-subtext">Bringing popular Indian meals, snacks, desserts, and beverages to your doorstep with fast local delivery.</p>
+                    <div class="social-links-glow">
+                        <a href="#" class="social-icon magnetic-target"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon magnetic-target"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon magnetic-target"><i class="fa-brands fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-grid">
+                    <div>
+                        <h4>Explore Hubs</h4>
+                        <ul>
+                            <li><a href="#restaurants" class="magnetic-target">Bangalore Indiranagar</a></li>
+                            <li><a href="#restaurants" class="magnetic-target">Mumbai Bandra</a></li>
+                            <li><a href="#restaurants" class="magnetic-target">Delhi Connaught Place</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#" class="magnetic-target">Fresh Food Mission</a></li>
+                            <li><a href="#" class="magnetic-target">Partner Kitchens</a></li>
+                            <li><a href="#" class="magnetic-target">Delivery Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>The Spice Chronicle</h4>
+                    <p>Subscribe to receive signature recipe drops and seasonal chef reservations.</p>
+                    <div class="newsletter-field-wrapper glass-panel">
+                        <input type="email" id="newsletter-email" placeholder="Epicurean email address">
+                        <button class="newsletter-btn btn-magnetic" id="btn-newsletter-subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <hr class="glass-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2026 FoodExpress India. Engineered for college presentation excellence.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Security Protocol</a>
+                    <a href="#">Hospitality Charter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Custom Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+    <!-- Custom Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
