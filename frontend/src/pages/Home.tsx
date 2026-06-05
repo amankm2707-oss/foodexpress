@@ -7,7 +7,7 @@ import CartSidebar from '../components/CartSidebar';
 import LoginPortals from '../components/LoginPortals';
 import Dashboards from '../components/Dashboards';
 import Footer from '../components/Footer';
-import { MenuItem, CartItem } from '../types';
+import type { MenuItem, CartItem } from '../types';
 
 const Home: React.FC = () => {
   const [cart, setCart] = useState<CartItem[]>([]);

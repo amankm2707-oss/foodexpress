@@ -1,5 +1,5 @@
 import React from 'react';
-import { CartItem } from '../types';
+import type { CartItem } from '../types';
 
 interface CartSidebarProps {
   isOpen: boolean;

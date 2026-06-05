@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuItem } from '../types';
+import type { MenuItem } from '../types';
 
 const indianMenuItems: MenuItem[] = [
     { id: 1, name: 'Chicken Biryani', category: 'biryani', diet: 'non-veg', price: 249, rating: 4.7, reviews: 342, time: 28, image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=500&q=80', desc: 'Aromatic basmati rice layered with tender chicken, fried onions, mint, and classic dum spices.' },
